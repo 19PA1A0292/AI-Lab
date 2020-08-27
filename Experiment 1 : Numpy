@@ -1,0 +1,416 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMvDtG/RNqLqHHEzuBEboXr",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/19PA1A0292/AI-Lab/blob/master/Experiment%201%20%3A%20Numpy\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xKbyOEQR_PcI",
+        "colab_type": "text"
+      },
+      "source": [
+        "      Experiment 1:Numpy"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "E0yVSTxd_VCn",
+        "colab_type": "text"
+      },
+      "source": [
+        " 1)Different ways to create a Numpy arrays"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "FUjBX0BhAHH0",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "3ebc88f8-8fd7-4799-e60a-622e361af6b4"
+      },
+      "source": [
+        " \n",
+        "[ ]\n",
+        "import numpy as np \n",
+        "p=np.array([1,2,3])\n",
+        "print(p)"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[1 2 3]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "IQH6y51qALx2",
+        "colab_type": "text"
+      },
+      "source": [
+        " 2) ADD,REMOVE, MODIFY array elements add"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Yg3T1UOQAhW5",
+        "colab_type": "text"
+      },
+      "source": [
+        " Add"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "-LQxtHVNAjza",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "092939ce-45f6-47ff-8e60-e61aa3cb9fa0"
+      },
+      "source": [
+        " \n",
+        "f=np.array([4,1,9])\n",
+        "q=np.append(f,[3,6,8])\n",
+        "print(q)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[4 1 9 3 6 8]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hDwOis8VAx7Q",
+        "colab_type": "text"
+      },
+      "source": [
+        "Remove"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "jobTFXMPAz-Y",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "7c430234-42f8-4f38-df44-db65db5ebba2"
+      },
+      "source": [
+        " \n",
+        "c=np.delete(f,2)\n",
+        "print(c)"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[4 1]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cDw94z9DA_bZ",
+        "colab_type": "text"
+      },
+      "source": [
+        "Modify"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "hGObJPQTBA6f",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "81ec1622-0785-4dea-f117-f5221b765946"
+      },
+      "source": [
+        " \n",
+        "c[c>3]=-1\n",
+        "print(c)"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[-1  1]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "kIZQk6ZXBFqA",
+        "colab_type": "text"
+      },
+      "source": [
+        " 3) Arthematic operations on Numpy array"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "aVQlDudRBMrs",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 567
+        },
+        "outputId": "3ef81b3b-2578-4930-cba6-262004ccd4c2"
+      },
+      "source": [
+        " \n",
+        "import numpy as np \n",
+        "l=np.random.random((5,5))\n",
+        "m=np.random.random((5,5))\n",
+        "num_sum=np.add(l,m)\n",
+        "num_diff=np.subtract(l,m)\n",
+        "num_prod=np.multiply(l,m)\n",
+        "num_quo=np.divide(l,m)\n",
+        "num_mod=np.mod(l,m)\n",
+        "num_pow=np.power(l,m)\n",
+        "print(num_sum)\n",
+        "print(num_diff)\n",
+        "print(num_prod)\n",
+        "print(num_quo)\n",
+        "print(num_mod)\n",
+        "print(num_pow)"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[[0.37815906 1.09878077 0.99035053 1.41101081 0.94835484]\n",
+            " [1.45573389 0.60094116 0.41265051 0.89545145 0.89441586]\n",
+            " [0.33563273 0.87999684 0.61493074 0.49811358 1.16387666]\n",
+            " [0.8677465  0.95775886 0.47040628 0.81333779 0.33058844]\n",
+            " [0.37043677 0.95952738 0.95980466 0.92316059 0.76739816]]\n",
+            "[[-0.02701506 -0.38228053  0.80624334 -0.39249948  0.07367878]\n",
+            " [ 0.26757958  0.44249412  0.06623623  0.622368   -0.29103347]\n",
+            " [-0.03408266  0.34911726  0.15627739 -0.29208946 -0.05508375]\n",
+            " [-0.28863268  0.3269165   0.1926852  -0.03627639 -0.26463958]\n",
+            " [-0.34337293  0.26358391  0.78634158  0.62223228 -0.12319924]]\n",
+            "[[0.03556862 0.2652952  0.08269146 0.45922391 0.22348709]\n",
+            " [0.51189058 0.04133231 0.0414733  0.10362284 0.17881981]\n",
+            " [0.02787192 0.16312789 0.0884293  0.04070022 0.33789367]\n",
+            " [0.16741879 0.20260691 0.04603862 0.1650506  0.00981365]\n",
+            " [0.00482961 0.21280408 0.07572297 0.11626311 0.14343047]]\n",
+            "[[ 0.86664963  0.48377487  9.75841203  0.5647383   1.16847102]\n",
+            " [ 1.45041217  6.58538863  1.38241049  5.55807919  0.50899045]\n",
+            " [ 0.81562759  2.31524086  1.6814619   0.26072302  0.90962176]\n",
+            " [ 0.50079925  2.03644435  2.38761671  0.91460502  0.11079597]\n",
+            " [ 0.03791464  1.75748657 10.06638579  5.13541877  0.72333348]]\n",
+            "[[0.175572   0.35825012 0.06981456 0.50925566 0.07367878]\n",
+            " [0.26757958 0.04637655 0.06623623 0.0762011  0.30169119]\n",
+            " [0.15077503 0.08367747 0.15627739 0.10301206 0.55439646]\n",
+            " [0.28955691 0.01149532 0.05382467 0.3885307  0.03297443]\n",
+            " [0.01353192 0.26358391 0.00575774 0.02037567 0.32209946]]\n",
+            "[[0.70296939 0.46758581 0.99017541 0.54416162 0.74556862]\n",
+            " [0.91534239 0.94976082 0.78068079 0.96303252 0.49150047]\n",
+            " [0.70486813 0.87877156 0.80369493 0.40737144 0.6980132 ]\n",
+            " [0.48840507 0.86969006 0.85787183 0.66924475 0.36223366]\n",
+            " [0.21531441 0.84272477 0.98829644 0.96194304 0.60382152]]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "yekZKJvwBZsG",
+        "colab_type": "text"
+      },
+      "source": [
+        " 4)slicing and iterating of numpy array Slicing"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "TP7hCjREBkPc",
+        "colab_type": "text"
+      },
+      "source": [
+        "Slicing"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "no-qNG9QBnJX",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "8554cc57-76d5-420d-e912-4a7e7291a7a6"
+      },
+      "source": [
+        " \n",
+        "import numpy as np \n",
+        "arr=np.array([1,2,3,4,5,6,7])\n",
+        "print(arr[1:6])"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[2 3 4 5 6]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "AUHPf8VaB2i1",
+        "colab_type": "text"
+      },
+      "source": [
+        "Iterating"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "9a9ns-ZzB5am",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 140
+        },
+        "outputId": "eb518324-9df1-4f38-d31f-ed3f9f04176c"
+      },
+      "source": [
+        " \n",
+        "for x in arr:\n",
+        "  print(x)"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "VgSxFQNAB-6P",
+        "colab_type": "text"
+      },
+      "source": [
+        " 5) matrix operations on bumpy arrays"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "RfhBXsJuCGqm",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 123
+        },
+        "outputId": "ac3e09c8-24a9-4cbc-fe95-6792c1cad72f"
+      },
+      "source": [
+        " \n",
+        "[ ]\n",
+        "import numpy as np \n",
+        "s=np.array([[1,2],[3,4]])\n",
+        "t=np.array([[5,6],[7,8]])\n",
+        "print(np.add(s,t))\n",
+        "print(np.subtract(s,t))\n",
+        "print(np.divide(s,t))"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[[ 6  8]\n",
+            " [10 12]]\n",
+            "[[-4 -4]\n",
+            " [-4 -4]]\n",
+            "[[0.2        0.33333333]\n",
+            " [0.42857143 0.5       ]]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
